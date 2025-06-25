@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Udemy Clone – Spring Boot Backend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #eef;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #aaa;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        a {
+            color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🎓 Udemy Clone – Spring Boot Backend Project</h1>
+
+<p>This is a full-stack ready backend project built using <strong>Java Spring Boot</strong>, simulating a Learning Management System (LMS) like <strong>Udemy</strong>. It includes user registration, role-based access, course management, student enrollment, and secure JWT-based authentication.</p>
+
+<h2>🚀 Features</h2>
+<ul>
+<li>User Registration (Admin, Instructor, Student)</li>
+<li>JWT-based Login Authentication</li>
+<li>Role-based Access Control</li>
+<li>Course Creation, Update & Deletion</li>
+<li>Enroll & Unenroll from Courses</li>
+<li>View Enrollments and Enrolled Students</li>
+<li>Secure Spring Security Configuration</li>
+<li>DTO-Entity Layered Architecture</li>
+</ul>
+
+<h2>🧰 Tech Stack</h2>
+<table>
+<tr><th>Technology</th><th>Description</th></tr>
+<tr><td>Java 17</td><td>Programming Language</td></tr>
+<tr><td>Spring Boot</td><td>Backend Framework</td></tr>
+<tr><td>Spring Security</td><td>Authentication & Authorization</td></tr>
+<tr><td>JWT</td><td>Token-based Authentication</td></tr>
+<tr><td>JPA (Hibernate)</td><td>ORM for DB interaction</td></tr>
+<tr><td>H2 / MySQL</td><td>In-memory or external DB</td></tr>
+<tr><td>Maven</td><td>Build and Dependency Management</td></tr>
+</table>
+
+<h2>🗂️ Project Folder Structure</h2>
+<pre><code>src/
+├── controller/
+├── dto/
+├── entity/
+├── mapper/
+├── repository/
+├── service/
+├── config/
+├── util/
+└── UdemyApplication.java
+</code></pre>
+
+<h2>🌐 REST API Endpoints</h2>
+
+<h3>🔐 Authentication & Home</h3>
+<ul>
+<li><code>GET /Welcome/{name}</code> – Welcome message</li>
+<li><code>GET /Logged_In</code> – Get current user</li>
+<li><code>GET /Login</code> – Login with JWT</li>
+</ul>
+
+<h3>👤 User APIs</h3>
+<ul>
+<li><code>POST /User/Create_Student</code></li>
+<li><code>POST /User/Create_Admin</code></li>
+<li><code>POST /User/Create_Instructor</code></li>
+<li><code>GET /User/Get_By_id/{user_id}</code></li>
+<li><code>GET /User/Get_By_email/{email}</code></li>
+<li><code>DELETE /User/Delete_By_Id/{user_id}</code></li>
+<li><code>DELETE /User/Delete_By_Email/{email}</code></li>
+<li><code>PUT /User/Update_Role/{user_id}/{new_role}</code></li>
+</ul>
+
+<h3>🛡️ Role APIs</h3>
+<ul>
+<li><code>POST /Role/Create_Admin_Role</code></li>
+<li><code>POST /Role/Create_Student_Role</code></li>
+<li><code>POST /Role/Create_Tutor_Role</code></li>
+<li><code>GET /Role/Get_Role/{role_id}</code></li>
+</ul>
+
+<h3>📚 Course APIs</h3>
+<ul>
+<li><code>POST /Course/Create_Course/{user_id}</code></li>
+<li><code>GET /Course/Get_Course/{course_id}</code></li>
+<li><code>DELETE /Course/DeleteByID/{course_id}</code></li>
+<li><code>PUT /Course/Update_Duration/{course_id}/{dur}</code></li>
+</ul>
+
+<h3>📝 Enrollment APIs</h3>
+<ul>
+<li><code>POST /EnrollInCourse/{course_id}/{user_id}</code></li>
+<li><code>GET /Get_Enrollment/{enroll_id}</code></li>
+<li><code>GET /Get_Enrolled_students/{course_id}</code></li>
+<li><code>PUT /UnEnroll_Student/{course_id}/{student_id}</code></li>
+</ul>
+
+<h2>🔐 Security Configuration</h2>
+<ul>
+<li>JWT filter validation</li>
+<li>Role-based access using Spring Security</li>
+<li>Stateless auth, CSRF disabled</li>
+<li>Only selected endpoints are public</li>
+</ul>
+
+<h2>▶️ How to Run Locally</h2>
+<pre><code>git clone https://github.com/your-username/udemy-clone-backend.git
+cd udemy-clone-backend
+mvn clean install
+mvn spring-boot:run
+</code></pre>
+
+<h2>🧑‍💻 Author</h2>
+<p><strong>Shivam (Shi-Stack-J)</strong><br>
+GitHub: <a href="https://github.com/shi-stack-j" target="_blank">github.com/shi-stack-j</a><br>
+Email: connect@yourdomain.com</p>
+
+<h2>📄 License</h2>
+<p>This project is released under the MIT License.</p>
+
+</body>
+</html>
