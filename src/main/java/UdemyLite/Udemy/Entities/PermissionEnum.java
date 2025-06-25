@@ -1,0 +1,16 @@
+package UdemyLite.Udemy.Entities;
+
+public enum PermissionEnum {
+    READ_ALL_COURSES,
+    READ_ALL_STUDENTS,
+    READ_ALL_TUTORS,
+    DELETE_STUDENT,
+    DELETE_COURSE,
+    DELETE_TUTOR,
+    DISABLE_TUTOR,
+    CREATE_COURSE,
+    CHANGE_ROLES,
+    ENROLL_IN_COURSE,
+    UNENROLL_IN_COURSE,
+    SEE_ENROLLED_STUDENTS
+}
