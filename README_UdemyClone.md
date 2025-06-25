@@ -156,6 +156,6 @@ src/
 
 **Shivam (Shi-Stack-J)**  
 🔗 GitHub: https://github.com/shi-stack-j/Udemy_LIte_Clone.git
-📧 Email: Shivamgangwar@gmail.com
+📧 Email: Shivamgangwar663@gmail.com
 
 ---
